@@ -1,1 +1,1 @@
-I have upload my website at https://github.com/ducnguyen2012/ChatBotAIWebsite
+I have deploy my website frontend at https://ducnguyen2012.github.io/ChatBotAIWebsite
