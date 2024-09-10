@@ -103,7 +103,7 @@ def generate_question(context: str) -> str:
     return question
 
 
-def EvalChatBot(pathToPDF: str, numberOfQuestion: int):
+def EvalChatBot(pathToPDF: str, query):
     uploaded_file = pathToPDF
     
     # Parse the PDF and convert text to documents
@@ -122,29 +122,21 @@ def EvalChatBot(pathToPDF: str, numberOfQuestion: int):
     )
     
     # Generate and answer questions
-    generated_questions = []
-    for i in range(numberOfQuestion):
-        # Retrieve a random context to generate a question from
-        random_page = pages[i % len(pages)]
-        context = random_page.page_content
-        
-        # Generate the question based on the context
-        question = generate_question(context)
-        
-        # Use the chatbot to answer the generated question
-        result = qa({"query": question})
-        answer = result['result']
-        source_documents = result['source_documents']
-        
-        contexts = [doc.page_content for doc in source_documents]
-        
-        generated_questions.append({
-            "question": question,
-            "answer": answer,
-            "contexts": contexts
-        })
+    
+    
+    result = qa({"query": query})
+    answer = result['result']
+    source_documents = result['source_documents']
+    
+    contexts = [doc.page_content for doc in source_documents]
+    
+    
     #! return a list of dictionary!
-    return generated_questions
+    return {
+        
+        "answer": answer,
+        "contexts": contexts
+    }
 
 
    
