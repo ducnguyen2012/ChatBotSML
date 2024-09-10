@@ -1,0 +1,11 @@
+ragas
+pandas
+numpy < 2.0.0
+ast
+langchain
+re
+io
+typing
+pypdf
+giskard
+datasets
