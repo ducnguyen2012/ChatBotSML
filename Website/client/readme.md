@@ -1,0 +1,2 @@
+- make sure you have install react js in your local computer
+- npm install all dependency in pakage.json
