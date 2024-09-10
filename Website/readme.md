@@ -1,0 +1,2 @@
+- run backend first: cd Website/server/ python backend.py
+- run frontend: cd Webste/client/ npm start
