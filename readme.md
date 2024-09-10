@@ -1,1 +1,2 @@
 I have deploy my website frontend at https://ducnguyen2012.github.io/ChatBotAIWebsite
+- All the instruction to Run and Evaluate I put in readme.md in each folder
